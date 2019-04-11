@@ -1,6 +1,6 @@
 # To-Do
 
-This is a simple to-do app created as a part of a learning react. More instructions and information will be added soon to this repository.
+This is a simple to-do app created as a part of a learning react.
 
 ## Functionalities :
 
