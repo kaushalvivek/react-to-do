@@ -1,6 +1,7 @@
 import React from 'react';
 import ToDoForm from './toDoForm';
 import Todo from './Todo';
+import Button from '@material-ui/core/Button';
 
 export default class ToDoList extends React.Component {
 
@@ -98,16 +99,16 @@ export default class ToDoList extends React.Component {
 					Todos left : {this.state.todos.filter(todo => !todo.complete).length}
 				</div>
 				<div>
-					<button onClick={() => this.changeToShow('all')}>All</button>
-					<button onClick={() => this.changeToShow('active')}>Active</button>
-					<button onClick={() => this.changeToShow('complete')}>Complete</button>
+					<Button color='primary' onClick={() => this.changeToShow('all')}>All</Button>
+					<Button color='primary' onClick={() => this.changeToShow('active')}>Active</Button>
+					<Button color='primary' onClick={() => this.changeToShow('complete')}>Complete</Button>
 				</div>
 				<div>
 					{this.state.todos.some(todo => todo.complete) ?
-						<button onClick={() => this.removeAllComplete()}>Remove All Complete Todos</button> : null}
+						<Button color='secondary' onClick={() => this.removeAllComplete()}>Remove All Complete Todos</Button> : null}
 				</div>
 				<div>
-					<button onClick={() => this.clear()}> Clear All Entries </button>
+					<Button variant = 'contained' color='secondary' onClick={() => this.clear()}> Clear All Entries </Button>
 				</div>
 			</div>
 

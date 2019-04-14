@@ -1,5 +1,7 @@
 import React from 'react';
 import shortid from 'shortid';
+import Input from '@material-ui/core/Input';
+import Button from '@material-ui/core/Button';
 
 export default class ToDoForm extends React.Component {
 
@@ -33,13 +35,13 @@ export default class ToDoForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input
+        <Input
           name="text"
           placeholder="Enter To Do Item..."
           value={this.state.text}
           onChange={this.handleChange}
         />
-        <button type='submit'>Add To List</button>
+        <Button type='submit'>Add To List</Button>
       </form>
     );
   };
